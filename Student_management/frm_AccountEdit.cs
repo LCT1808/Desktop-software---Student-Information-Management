@@ -132,30 +132,46 @@ namespace Student_management
             {
                 if (txtName.Text != "" && txtPhone.Text != "" && txtUsername.Text != "" && cbbRole.SelectedIndex != -1 && (status_check() != true || status_check() != false))
                 {
-                    var account = new Account()
+                    if (txtPhone.Text.Length != 10)
                     {
-                        Username = txtUsername.Text,
-                        DateOfBirth = dtp.Value.Date,
-                        Name = txtName.Text,
-                        Phone = txtPhone.Text,
-                        Role = cbbRole.Text,
-                        Pwd = txtPhone.Text.Substring(4, 6),
-                        Status = status_check()
-                    };
-                    context.Accounts.Add(account);
-                    context.SaveChanges();
-                    MessageBox.Show("A new account has been added successfully.");
+                        MessageBox.Show("Phone number must have 10 characters.");
+                        this.bAdd_Click(sender, e);
+                    }
+                    else
+                    {
+                        var account = new Account()
+                        {
+                            Username = txtUsername.Text,
+                            DateOfBirth = dtp.Value.Date,
+                            Name = txtName.Text,
+                            Phone = txtPhone.Text,
+                            Role = cbbRole.Text,
+                            Pwd = txtPhone.Text.Substring(4, 6),
+                            Status = status_check()
+                        };
+                        context.Accounts.Add(account);
+                        context.SaveChanges();
+                        MessageBox.Show("A new account has been added successfully.");
 
-                    show_GRD();
-                    clear_grbAccountInfo();
-                    enable_AccountInfo(false);
-                    enable_buttons(false);
-                    bAdd.Enabled = true;
+                        show_GRD();
+                        clear_grbAccountInfo();
+                        enable_AccountInfo(false);
+                        enable_buttons(false);
+                        bAdd.Enabled = true;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Account information must be filled in completely.");
-                    this.bAdd_Click(sender, e);
+                    DialogResult confirm = MessageBox.Show("Account information must be filled in completely.", "Continue adding or not?", MessageBoxButtons.YesNo);
+
+                    if (confirm == System.Windows.Forms.DialogResult.Yes) { this.bAdd_Click(sender, e); }
+                    else
+                    {
+                        clear_grbAccountInfo();
+                        enable_AccountInfo(false);
+                        enable_buttons(false);
+                        bAdd.Enabled = true;
+                    }
                 }
             }
             else if (condition == 1)

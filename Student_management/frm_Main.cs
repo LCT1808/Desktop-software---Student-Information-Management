@@ -27,7 +27,7 @@ namespace Student_management
                 currentForm.Close();
             }
             currentForm = newForm;
-            currentForm.TopLevel = false;
+           currentForm.TopLevel = false;
             panel.Controls.Add(currentForm);
             newForm.Show();
         }
@@ -80,6 +80,17 @@ namespace Student_management
         {
             OpenChildForm(new frm_StudentList(_role));
             return;
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Logout or not?", "Confirmation box", MessageBoxButtons.YesNo);
+
+            if (confirm == System.Windows.Forms.DialogResult.Yes)
+            {
+                frm_Main frm_Main = new frm_Main();
+                DialogResult result = frm_Main.ShowDialog();
+            }
         }
     }
 }

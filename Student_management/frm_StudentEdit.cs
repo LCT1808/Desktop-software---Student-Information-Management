@@ -121,8 +121,16 @@ namespace Student_management
                     bAdd.Enabled = true;
                 }
                 else {
-                    MessageBox.Show("Student information must be filled in completely.");
-                    this.bAdd_Click(sender, e);
+                    DialogResult confirm = MessageBox.Show("Student information must be filled in completely.", "Continue adding or not?", MessageBoxButtons.YesNo);
+
+                    if (confirm == System.Windows.Forms.DialogResult.Yes) { this.bAdd_Click(sender, e); }
+                    else
+                    {
+                        clear_grbStudentInfo();
+                        enable_StudentInfo(false);
+                        enable_buttons(false);
+                        bAdd.Enabled = true;
+                    }
                 }
             }
             else if (condition == 1)

@@ -68,17 +68,20 @@ namespace Student_management
         {
             if (_role == "employee")
             {
-                grbUpdate.Enabled = false;
+                enable_buttons(false);
                 bImport.Enabled = false;
                 bExport.Enabled = false;
             }
-            txtID.Enabled = false;
-            txtName.Enabled = false;
-            dtp.Enabled = false;
-            txtDepartment.Enabled = false;
-            enable_CerInfo(false);
-            enable_buttons(false);
-            bAdd.Enabled = true;
+            else
+            {
+                txtID.Enabled = false;
+                txtName.Enabled = false;
+                dtp.Enabled = false;
+                txtDepartment.Enabled = false;
+                enable_CerInfo(false);
+                enable_buttons(false);
+                bAdd.Enabled = true;
+            }
 
             txtID.Text = _studentID;
             _student = context.Students.AsQueryable().Include(s => s.Certificates).FirstOrDefault(s => s.StudentID.Equals(_studentID));
@@ -136,8 +139,15 @@ namespace Student_management
                 }
                 else
                 {
-                    MessageBox.Show("Certificate information must be filled in completely.");
-                    this.bAdd_Click(sender, e);
+                    DialogResult confirm = MessageBox.Show("Certificate information must be filled in completely.", "Continue adding or not?", MessageBoxButtons.YesNo);
+                    
+                    if (confirm == System.Windows.Forms.DialogResult.Yes) { this.bAdd_Click(sender, e); }
+                    else {
+                        clear_grbCerInfo();
+                        enable_CerInfo(false);
+                        enable_buttons(false);
+                        bAdd.Enabled = true;
+                    }
                 }
             }
             else if (condition == 1)
