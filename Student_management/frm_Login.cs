@@ -37,11 +37,11 @@ namespace Student_management
             }
             else if (acc != null && acc.Status == false)
             {
-                MessageBox.Show("This account is locked.");
+                MessageBox.Show("This account was locked.");
             }
             else if (acc == null)
             {
-                MessageBox.Show("Username or Password was incorrect! Please enter again!");
+                MessageBox.Show("Username or Password was incorrect!");
             }
         }
 

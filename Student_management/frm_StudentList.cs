@@ -51,6 +51,11 @@ namespace Student_management
 
         private void frm_StudentList_Load(object sender, EventArgs e)
         {
+            if (_role == "employee")
+            {
+                bExport.Enabled = false;
+                bImport.Enabled = false;
+            }
             cbbSort.SelectedIndex = 0;
             show_GRD();
 

@@ -74,14 +74,18 @@ namespace Student_management
             }
             else
             {
-                txtID.Enabled = false;
-                txtName.Enabled = false;
-                dtp.Enabled = false;
-                txtDepartment.Enabled = false;
                 enable_CerInfo(false);
                 enable_buttons(false);
                 bAdd.Enabled = true;
             }
+
+            txtID.Enabled = false;
+            txtName.Enabled = false;
+            dtp.Enabled = false;
+            txtDepartment.Enabled = false;
+            txtCerID.Enabled = false;
+            txtCerName.Enabled = false;
+            dtpCer.Enabled = false;
 
             txtID.Text = _studentID;
             _student = context.Students.AsQueryable().Include(s => s.Certificates).FirstOrDefault(s => s.StudentID.Equals(_studentID));
@@ -101,9 +105,12 @@ namespace Student_management
                 dtpCer.Value = DateTime.Parse(grdCer.CurrentRow.Cells[4].Value.ToString());
             }
 
-            enable_buttons(true);
-            bSave.Enabled = false;
-            condition = 2;
+            if (_role != "employee")
+            {
+                enable_buttons(true);
+                bSave.Enabled = false;
+                condition = 2;
+            }
         }
 
         private void bAdd_Click(object sender, EventArgs e)

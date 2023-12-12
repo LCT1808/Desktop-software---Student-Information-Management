@@ -88,8 +88,7 @@ namespace Student_management
 
             if (confirm == System.Windows.Forms.DialogResult.Yes)
             {
-                frm_Main frm_Main = new frm_Main();
-                DialogResult result = frm_Main.ShowDialog();
+                Application.Restart();
             }
         }
     }
