@@ -39,6 +39,8 @@ namespace Student_management
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.grbCertificateInfo = new System.Windows.Forms.GroupBox();
+            this.bExport = new System.Windows.Forms.Button();
+            this.bImport = new System.Windows.Forms.Button();
             this.dtpCer = new System.Windows.Forms.DateTimePicker();
             this.txtCerName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,8 +54,6 @@ namespace Student_management
             this.bDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grdCer = new System.Windows.Forms.DataGridView();
-            this.bExport = new System.Windows.Forms.Button();
-            this.bImport = new System.Windows.Forms.Button();
             this.grbStudentInfo.SuspendLayout();
             this.grbCertificateInfo.SuspendLayout();
             this.grbUpdate.SuspendLayout();
@@ -160,6 +160,26 @@ namespace Student_management
             this.grbCertificateInfo.TabIndex = 30;
             this.grbCertificateInfo.TabStop = false;
             this.grbCertificateInfo.Text = " Certificate Information";
+            // 
+            // bExport
+            // 
+            this.bExport.Location = new System.Drawing.Point(266, 115);
+            this.bExport.Name = "bExport";
+            this.bExport.Size = new System.Drawing.Size(94, 31);
+            this.bExport.TabIndex = 32;
+            this.bExport.Text = "Export";
+            this.bExport.UseVisualStyleBackColor = true;
+            this.bExport.Click += new System.EventHandler(this.bExport_Click);
+            // 
+            // bImport
+            // 
+            this.bImport.Location = new System.Drawing.Point(118, 115);
+            this.bImport.Name = "bImport";
+            this.bImport.Size = new System.Drawing.Size(94, 31);
+            this.bImport.TabIndex = 31;
+            this.bImport.Text = "Import";
+            this.bImport.UseVisualStyleBackColor = true;
+            this.bImport.Click += new System.EventHandler(this.bImport_Click);
             // 
             // dtpCer
             // 
@@ -285,26 +305,6 @@ namespace Student_management
             this.grdCer.TabIndex = 0;
             this.grdCer.Click += new System.EventHandler(this.grdCer_Click);
             // 
-            // bExport
-            // 
-            this.bExport.Location = new System.Drawing.Point(266, 115);
-            this.bExport.Name = "bExport";
-            this.bExport.Size = new System.Drawing.Size(94, 31);
-            this.bExport.TabIndex = 32;
-            this.bExport.Text = "Export";
-            this.bExport.UseVisualStyleBackColor = true;
-            this.bExport.Click += new System.EventHandler(this.bExport_Click);
-            // 
-            // bImport
-            // 
-            this.bImport.Location = new System.Drawing.Point(118, 115);
-            this.bImport.Name = "bImport";
-            this.bImport.Size = new System.Drawing.Size(94, 31);
-            this.bImport.TabIndex = 31;
-            this.bImport.Text = "Import";
-            this.bImport.UseVisualStyleBackColor = true;
-            this.bImport.Click += new System.EventHandler(this.bImport_Click);
-            // 
             // frm_StudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -315,7 +315,7 @@ namespace Student_management
             this.Controls.Add(this.grbCertificateInfo);
             this.Controls.Add(this.grbStudentInfo);
             this.Name = "frm_StudentDetails";
-            this.Text = "frm_StudentDetails";
+            this.Text = "Student Details";
             this.Load += new System.EventHandler(this.frm_StudentDetails_Load);
             this.grbStudentInfo.ResumeLayout(false);
             this.grbStudentInfo.PerformLayout();

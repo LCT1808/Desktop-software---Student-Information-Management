@@ -208,7 +208,7 @@ namespace Student_management
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_AccountsList";
-            this.Text = "List of accounts";
+            this.Text = "bi";
             this.Load += new System.EventHandler(this.frm_AccountsList_Load);
             this.grbAccountInfo.ResumeLayout(false);
             this.grbAccountInfo.PerformLayout();
