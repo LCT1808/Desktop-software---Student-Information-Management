@@ -73,9 +73,7 @@ namespace Student_management
                 context.SaveChanges();
 
                 show_GRD();
-                clear_grbAccountInfo();
-                enable_buttons(false);
-                bAdd.Enabled = true;
+                default_begin();
             }
         }
 
@@ -126,6 +124,14 @@ namespace Student_management
             }
         }
 
+        public void default_begin()
+        {
+            clear_grbAccountInfo();
+            enable_AccountInfo(false);
+            enable_buttons(false);
+            bAdd.Enabled = true;
+        }
+
         private void bSave_Click(object sender, EventArgs e)
         {
             if (condition == 0)
@@ -149,15 +155,21 @@ namespace Student_management
                             Pwd = txtPhone.Text.Substring(4, 6),
                             Status = status_check()
                         };
-                        context.Accounts.Add(account);
-                        context.SaveChanges();
-                        MessageBox.Show("A new account has been added successfully.");
 
-                        show_GRD();
-                        clear_grbAccountInfo();
-                        enable_AccountInfo(false);
-                        enable_buttons(false);
-                        bAdd.Enabled = true;
+                        DialogResult confirm = MessageBox.Show("Confirm you want to add this account.", "Confirm or not?", MessageBoxButtons.YesNo);
+
+                        if (confirm == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            context.Accounts.Add(account);
+                            context.SaveChanges();
+                            MessageBox.Show("A new account has been added successfully.");
+                            show_GRD();
+                            default_begin();
+                        }
+                        else
+                        {
+                            default_begin();
+                        }
                     }
                 }
                 else
@@ -167,10 +179,7 @@ namespace Student_management
                     if (confirm == System.Windows.Forms.DialogResult.Yes) { this.bAdd_Click(sender, e); }
                     else
                     {
-                        clear_grbAccountInfo();
-                        enable_AccountInfo(false);
-                        enable_buttons(false);
-                        bAdd.Enabled = true;
+                        default_begin();
                     }
                 }
             }
@@ -188,10 +197,7 @@ namespace Student_management
                     MessageBox.Show("The account information has been updated successfully.");
 
                     show_GRD();
-                    clear_grbAccountInfo();
-                    enable_AccountInfo(false);
-                    enable_buttons(false);
-                    bAdd.Enabled = true;
+                    default_begin();
                 }
             }
         }

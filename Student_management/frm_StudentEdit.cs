@@ -103,6 +103,14 @@ namespace Student_management
             condition = 0;
         }
 
+        public void default_begin()
+        {
+            clear_grbStudentInfo();
+            enable_StudentInfo(false);
+            enable_buttons(false);
+            bAdd.Enabled = true;
+        }
+
         private void bSave_Click(object sender, EventArgs e)
         {
             if (condition == 0)
@@ -110,15 +118,20 @@ namespace Student_management
                 if (txtID.Text != "" && txtName.Text != "" && cbbDepartment.SelectedIndex != -1)
                 {
                     var student = new Student() { StudentID = txtID.Text, Fullname = txtName.Text, DateOfBirth = dtp.Value.Date, Department = cbbDepartment.Text };
-                    context.Students.Add(student);
-                    context.SaveChanges();
-                    MessageBox.Show("A new student has been added successfully.");
+                    
+                    DialogResult confirm = MessageBox.Show("Confirm you want to add this student.", "Confirm or not?", MessageBoxButtons.YesNo);
 
-                    show_GRD();
-                    clear_grbStudentInfo();
-                    enable_StudentInfo(false);
-                    enable_buttons(false);
-                    bAdd.Enabled = true;
+                    if (confirm == System.Windows.Forms.DialogResult.Yes){
+                        context.Students.Add(student);
+                        context.SaveChanges();
+                        MessageBox.Show("A new student has been added successfully.");
+                        show_GRD();
+                        default_begin();
+                    }
+                    else
+                    {
+                        default_begin();
+                    }
                 }
                 else {
                     DialogResult confirm = MessageBox.Show("Student information must be filled in completely.", "Continue adding or not?", MessageBoxButtons.YesNo);
@@ -126,10 +139,7 @@ namespace Student_management
                     if (confirm == System.Windows.Forms.DialogResult.Yes) { this.bAdd_Click(sender, e); }
                     else
                     {
-                        clear_grbStudentInfo();
-                        enable_StudentInfo(false);
-                        enable_buttons(false);
-                        bAdd.Enabled = true;
+                        default_begin();
                     }
                 }
             }
@@ -145,10 +155,7 @@ namespace Student_management
                     MessageBox.Show("The student information has been updated successfully.");
 
                     show_GRD();
-                    clear_grbStudentInfo();
-                    enable_StudentInfo(false);
-                    enable_buttons(false);
-                    bAdd.Enabled = true;
+                    default_begin();
                 }
             }
         }
@@ -164,9 +171,7 @@ namespace Student_management
                 context.SaveChanges();
 
                 show_GRD();
-                clear_grbStudentInfo();
-                enable_buttons(false);
-                bAdd.Enabled = true;
+                default_begin();
             }
         }
     }

@@ -32,6 +32,14 @@ namespace Student_management
             _role = role;
         }
 
+        public void default_begin()
+        {
+            clear_grbCerInfo();
+            enable_CerInfo(false);
+            enable_buttons(false);
+            bAdd.Enabled = true;
+        }
+
         public void show_GRD()
         {
             if (_student.Certificates != null)
@@ -134,15 +142,20 @@ namespace Student_management
                 if (txtCerID.Text != "" && txtCerName.Text != "")
                 {
                     var certificate = new Certificate() { Student = _student, CerID = txtCerID.Text, Date = dtpCer.Value.Date, NameOfCer = txtCerName.Text };
-                    context.Certificates.Add(certificate);
-                    context.SaveChanges();
-                    MessageBox.Show("A new certificate has been added successfully.");
+                    
+                    DialogResult confirm = MessageBox.Show("Confirm you want to add this certificate.", "Confirm or not?", MessageBoxButtons.YesNo);
 
-                    show_GRD();
-                    clear_grbCerInfo();
-                    enable_CerInfo(false);
-                    enable_buttons(false);
-                    bAdd.Enabled = true;
+                    if (confirm == System.Windows.Forms.DialogResult.Yes) {
+                        context.Certificates.Add(certificate);
+                        context.SaveChanges();
+                        MessageBox.Show("A new certificate has been added successfully.");
+                        show_GRD();
+                        default_begin();
+                    }
+                    else
+                    {
+                        default_begin();
+                    }
                 }
                 else
                 {
@@ -150,10 +163,7 @@ namespace Student_management
                     
                     if (confirm == System.Windows.Forms.DialogResult.Yes) { this.bAdd_Click(sender, e); }
                     else {
-                        clear_grbCerInfo();
-                        enable_CerInfo(false);
-                        enable_buttons(false);
-                        bAdd.Enabled = true;
+                        default_begin();
                     }
                 }
             }
@@ -168,10 +178,7 @@ namespace Student_management
                     MessageBox.Show("The certificate information has been updated successfully.");
 
                     show_GRD();
-                    clear_grbCerInfo();
-                    enable_CerInfo(false);
-                    enable_buttons(false);
-                    bAdd.Enabled = true;
+                    default_begin();
                 }
             }
         }
@@ -186,9 +193,7 @@ namespace Student_management
                 context.Certificates.Remove(_cer);
                 context.SaveChanges();
                 show_GRD();
-                clear_grbCerInfo();
-                enable_buttons(false);
-                bAdd.Enabled = true;
+                default_begin();
             }
         }
 

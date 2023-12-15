@@ -37,8 +37,8 @@ namespace Student_management
             this.ListOfAccountsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditAccountMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeProToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel = new System.Windows.Forms.Panel();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,14 +67,14 @@ namespace Student_management
             // listOfStudentToolStripMenuItem
             // 
             this.listOfStudentToolStripMenuItem.Name = "listOfStudentToolStripMenuItem";
-            this.listOfStudentToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
-            this.listOfStudentToolStripMenuItem.Text = "List of Student";
+            this.listOfStudentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.listOfStudentToolStripMenuItem.Text = "List of Students";
             this.listOfStudentToolStripMenuItem.Click += new System.EventHandler(this.listOfStudentToolStripMenuItem_Click);
             // 
             // EditStudentMenuItem
             // 
             this.EditStudentMenuItem.Name = "EditStudentMenuItem";
-            this.EditStudentMenuItem.Size = new System.Drawing.Size(228, 34);
+            this.EditStudentMenuItem.Size = new System.Drawing.Size(270, 34);
             this.EditStudentMenuItem.Text = "Edit";
             this.EditStudentMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -110,6 +110,13 @@ namespace Student_management
             this.changeProToolStripMenuItem.Text = "Change Profile Picture";
             this.changeProToolStripMenuItem.Click += new System.EventHandler(this.changeProToolStripMenuItem_Click);
             // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
             // panel
             // 
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -119,13 +126,6 @@ namespace Student_management
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(800, 413);
             this.panel.TabIndex = 1;
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
-            this.logOutToolStripMenuItem.Text = "Log out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // frm_Main
             // 
