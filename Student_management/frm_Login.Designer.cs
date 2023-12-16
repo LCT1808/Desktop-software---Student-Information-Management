@@ -40,9 +40,10 @@ namespace Student_management
             // bExit
             // 
             this.bExit.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bExit.Location = new System.Drawing.Point(422, 263);
+            this.bExit.Location = new System.Drawing.Point(375, 210);
+            this.bExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bExit.Name = "bExit";
-            this.bExit.Size = new System.Drawing.Size(113, 30);
+            this.bExit.Size = new System.Drawing.Size(100, 24);
             this.bExit.TabIndex = 23;
             this.bExit.Text = "Exit";
             this.bExit.UseVisualStyleBackColor = false;
@@ -51,9 +52,10 @@ namespace Student_management
             // bOK
             // 
             this.bOK.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bOK.Location = new System.Drawing.Point(288, 263);
+            this.bOK.Location = new System.Drawing.Point(256, 210);
+            this.bOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bOK.Name = "bOK";
-            this.bOK.Size = new System.Drawing.Size(106, 30);
+            this.bOK.Size = new System.Drawing.Size(94, 24);
             this.bOK.TabIndex = 22;
             this.bOK.Text = "OK";
             this.bOK.UseVisualStyleBackColor = false;
@@ -61,42 +63,44 @@ namespace Student_management
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(348, 203);
+            this.txtPwd.Location = new System.Drawing.Point(309, 162);
+            this.txtPwd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
-            this.txtPwd.Size = new System.Drawing.Size(224, 26);
+            this.txtPwd.Size = new System.Drawing.Size(200, 22);
             this.txtPwd.TabIndex = 21;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(348, 157);
+            this.txtUsername.Location = new System.Drawing.Point(309, 126);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(224, 26);
+            this.txtUsername.Size = new System.Drawing.Size(200, 22);
             this.txtUsername.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(228, 206);
+            this.label2.Location = new System.Drawing.Point(203, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Password";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(228, 160);
+            this.label1.Location = new System.Drawing.Point(203, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Username";
             // 
             // frm_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.ControlBox = false;
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.bOK);
@@ -104,8 +108,10 @@ namespace Student_management
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
