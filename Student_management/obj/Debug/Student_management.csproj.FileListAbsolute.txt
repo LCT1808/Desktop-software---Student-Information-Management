@@ -126,3 +126,46 @@ D:\Downloads\DOTNET - Midterm Project (17-12-2023)\Source\Student_management\.NE
 D:\Downloads\DOTNET - Midterm Project (17-12-2023)\Source\Student_management\.NET---midterm-project\Student_management\obj\Debug\Student_management.csproj.CopyComplete
 D:\Downloads\DOTNET - Midterm Project (17-12-2023)\Source\Student_management\.NET---midterm-project\Student_management\obj\Debug\Student_management.exe
 D:\Downloads\DOTNET - Midterm Project (17-12-2023)\Source\Student_management\.NET---midterm-project\Student_management\obj\Debug\Student_management.pdb
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Student_management.exe.config
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Student_management.exe
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Student_management.pdb
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EntityFramework.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EPPlus.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Microsoft.SqlServer.Server.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Buffers.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Memory.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EntityFramework.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\EPPlus.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Microsoft.SqlServer.Server.pdb
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\Microsoft.SqlServer.Server.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Buffers.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Memory.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.csproj.AssemblyReference.cache
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_AccountChangePicture.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_AccountEdit.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_AccountLoginHistory.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_AccountsList.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_StudentDetails.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_StudentEdit.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_StudentList.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_Login.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.frm_Main.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.Migrations.CreateDB.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.Migrations.UpdateDB.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.Properties.Resources.resources
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.csproj.GenerateResource.cache
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.csproj.CoreCompileInputs.cache
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.csproj.CopyComplete
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.exe
+C:\Users\TienSheep\Downloads\.NET---midterm-project\Student_management\obj\Debug\Student_management.pdb
