@@ -38,6 +38,9 @@ namespace Student_management
             else if (acc != null && acc.Status == false)
             {
                 MessageBox.Show("This account was locked.");
+                txtUsername.Text = "";
+                txtPwd.Text = "";
+                txtUsername.Focus();
             }
             else if (acc == null)
             {
@@ -50,5 +53,9 @@ namespace Student_management
             Application.Exit();
         }
 
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+            txtUsername.Focus();
+        }
     }
 }
