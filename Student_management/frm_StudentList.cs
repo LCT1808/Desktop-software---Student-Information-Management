@@ -131,17 +131,29 @@ namespace Student_management
                         int columnCount = worksheet.Dimension.End.Column;
                         for (int i = 2; i < worksheet.Dimension.End.Row; i++)
                         {
+                            var skip = false;
                             var _listCellValue = new List<String>();
                             for (int j = 1; j <= columnCount; j++)
                             {
+                                var cellValue = worksheet.Cells[i, j].Text;
+                                if (string.IsNullOrEmpty(cellValue))
+                                {
+                                    skip = true;
+                                    break;
+                                }
                                 _listCellValue.Add(worksheet.Cells[i,j].Text);
                             }
-                            _listStudent.Add(new Student() { 
-                                StudentID = _listCellValue[0],
-                                Fullname = _listCellValue[1],
-                                DateOfBirth = DateTime.Parse(_listCellValue[2]),
-                                Department = _listCellValue[3]
-                            });
+                            if (!skip)
+                            {
+                                _listStudent.Add(new Student()
+                                {
+                                    StudentID = _listCellValue[0],
+                                    Fullname = _listCellValue[1],
+                                    DateOfBirth = DateTime.Parse(_listCellValue[2]),
+                                    Department = _listCellValue[3]
+                                });
+                            }
+                            
                         }
                     }
                     foreach (var student in _listStudent)
